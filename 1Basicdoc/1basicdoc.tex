@@ -1,0 +1,138 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usepackage{beamerthemesplit}
+\usepackage{textcomp}
+\title{Creating a Basic Document using \LaTeX}
+\author{SPACE}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Basic Document}
+%\begin{center}
+\begin{block}{Try this...}
+\textbackslash documentclass \{article\} \\
+\textbackslash begin\{document\}\\
+Small is beautiful.\\
+\textbackslash end\{document\}
+\end{block}
+\begin{enumerate}
+\item \textbackslash documentclass \{article\}
+\item[•] This specifies what sort of document you intend to write.\{eg:article,letter,report etc\}
+\item \textbackslash begin\{document\} 
+\item[•] This begins the Document
+\item \textbackslash end\{document\} 
+\item[•] This ends the Document
+\item The text in between will be the content of the Document
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compilation}
+\begin{itemize}
+\item Select pdflatex \{shortcut F6 \} to compile
+\item To view pdf select Viewpdf or \{shortcut F7\}
+\item we can also do this through commandline
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Line Breaking and Page Breaking}
+\begin{enumerate}
+\item To break a line in \LaTeX
+\item[]\framebox{\textbackslash\textbackslash \hspace{0.2cm} or \hspace{0.2cm} \textbackslash newline}
+\item To start a newpage
+\item[] \framebox{\textbackslash newpage}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Special Characters \& Ready-Made Strings}
+\begin{block}{Ready Made Strings}
+\begin{enumerate}
+\item[] \textbackslash today \hspace{0.2cm} - Current Date
+\item[] \textbackslash TeX \hspace{0.2cm} - \TeX
+\item[] \textbackslash LaTeX \hspace{0.2cm} - \LaTeX
+\item[] \textbackslash LaTeXe \hspace{0.2cm} - \LaTeXe
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{Special Characters}
+\begin{itemize}
+\pause \item[] 
+\begin{table}
+\caption{Special Characters}
+\centering
+\begin{tabular}{c c}
+\hline\hline
+Special Character & \LaTeX Method \\[0.5 ex]
+\hline
+\# & \textbackslash \# \\
+\$ & \textbackslash \$ \\
+\& & \textbackslash \& \\
+\% & \textbackslash \% \\
+\^{} & \textbackslash \^{} \\
+\_ & \textbackslash \_ \\
+\{ & \textbackslash \{ \\
+\} & \textbackslash \} \\[1 ex]
+\hline
+\end{tabular}
+\end{table}
+\vspace{0.2cm}
+\pause \item How will you print \textbackslash 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Quotes and Dashes}
+\begin{block}{Quotation Marks}
+\begin{itemize}
+\pause \item Use two \`\ (grave accent)for opening quotation \\ mark and \'\ (vertical quote) for closing quotation mark.
+\pause \item For single quotes just use one of each.
+\pause \item try printing this line -- ``Please press the `x' key.''
+\end{itemize}
+\end{block}
+\begin{block}{Dashes \& Hyphens}
+\begin{itemize}
+\pause \item Four kinds of Dashes
+\begin{itemize}
+\pause \item Hyphen $\rightarrow$ `-' \{a-b\}
+\pause \item en-dash $\rightarrow$ `$--$' \{13 -- 27\}
+\pause \item em-dash $\rightarrow$ `$---$' \{yes --- or no ?\}
+\pause \item minus $\rightarrow$ `-' \{-1\}
+\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Some more special Characters..}
+\begin{block}{How to print Tilde}
+\begin{itemize}
+\pause \item \~{} $\rightarrow$ \textbackslash\~{}\{\}
+\end{itemize}
+\end{block}
+\begin{block}{How to print Degree Symbol}
+\begin{itemize}
+\pause \item $-30\,^{\circ}\mathrm{C}$  $\rightarrow$ \$-30\textbackslash,\^\ \{\textbackslash circ\}\textbackslash mathrm\{C\}\$
+\pause \item try printing $50\,^{\circ}\mathrm{F}$
+\pause \item Another easy way
+\begin{itemize}
+\pause \item \textbackslash usepackage\{textcomp\}
+\pause \item 30 \textbackslash textcelsius\{\} is 86 \textbackslash textdegree\{\}F
+\pause \item 30 \textcelsius{} is 86 \textdegree{}F
+\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Spacing \ldots}
+\begin{block}{spacing}
+\begin{itemize}
+\pause \item A tilde ‘\~{}’ character generates a space that cannot be enlarged
+\pause \item The additional space after periods can be disabled with the command  
+\pause \item[] \framebox{\textbackslash frenchspacing}
+\end{itemize}
+\end{block}
+\end{frame}
+%------------------------------------------------------------------------------------------
+\end{document}
