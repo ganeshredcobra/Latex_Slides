@@ -1,0 +1,97 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usepackage{beamerthemesplit}
+\usepackage{color}
+\usepackage{textcomp}
+\title{Itemize,Enumerate \& Abstract \\ Using \LaTeX}
+\author{SPACE}
+\date{\today}
+%\logo{\includegraphics[width=1cm]{space}}
+\begin{document}
+\maketitle
+\begin{frame}{Itemize,Enumerate and Description}
+\begin{itemize}
+\pause \item itemize environment is suitable for simple lists, the enumerate environment for enumerated lists, and the description environment for descriptions.\vspace{0.5cm}
+\pause\item[]\begin{columns}[c]
+\column{1.5in}
+\textbackslash begin\{itemize\}\\
+\textbackslash item text\\
+\textbackslash item text
+\textbackslash end\{itemize\}\\
+\column{1.5in}
+\textbackslash begin\{enumerate\}\\
+\textbackslash item text\\
+\textbackslash item text
+\textbackslash end\{enumerate\}
+\end{columns}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Description\ldots}
+\begin{itemize}
+\item[] \begin{block}{items\ldots}
+\begin{itemize}
+\pause\item \textbackslash item
+\pause\item \textbackslash item[~]
+\pause\item \textbackslash item[-]
+\end{itemize}
+\end{block}
+\pause\item[] \begin{block}{Description\ldots}
+\textbackslash begin\{Description\}\\
+\textbackslash item[Main] some text\\
+\textbackslash item[Sub] some more text\\
+\textbackslash end\{Description\}
+\end{block}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Flushleft,Flushright and center }
+\begin{itemize}
+\pause \item Generate paragraphs that are either left- or right-aligned. The center environment generates centred text
+\item[] 
+\pause\item[]\begin{columns}[c]
+\column{1.5in}
+\underline{Flushleft}\\
+\vspace{0.3cm}
+\textbackslash begin\{flushleft\}\\
+Some text\ldots\\
+\textbackslash end\{flushleft\}\\
+\column{1.5in}
+\underline{Flushright}\\
+\vspace{0.3cm}
+\textbackslash begin\{flushright\}\\
+some text\ldots\\
+\textbackslash end\{flushright\}
+\column{1.5in}
+\underline{Center}\\
+\vspace{0.3cm}
+\textbackslash begin\{center\}\\
+Some text \ldots\\
+\textbackslash end\{center\}
+\end{columns}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Abstract \& Printing Verbatim}
+\setbeamercovered{transparent}
+\begin{itemize}
+\pause\item[]\begin{block}{Abstract}
+\begin{itemize}
+\pause \item In scientific publications it is customary to start with an abstract which gives
+the reader a quick overview 
+\pause \item[] \textbackslash begin\{abstract\}\\
+abstract text\\
+\textbackslash end\{abstract\}
+\end{itemize}
+\end{block}
+\pause \item[]\begin{block}{Printing Verbatim}
+\begin{itemize}
+\pause \item Text that is enclosed between \textbackslash begin\{verbatim\} and \textbackslash end\{verbatim\} will
+be directly printed, as if typed on a typewriter.
+\pause \item Within a paragraph, similar behavior can be accessed with \textbackslash verb~$|text...|$
+\end{itemize}
+\end{block}
+\end{itemize}
+\end{frame}
+
+\end{document}
