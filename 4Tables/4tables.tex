@@ -1,0 +1,189 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usepackage{beamerthemesplit}
+\usepackage{color}
+\usepackage{textcomp}
+\title{Tables in \LaTeX}
+\author{SPACE}
+\date{\today}
+%\logo{\includegraphics[width=1cm]{space}}
+\begin{document}
+\maketitle
+\begin{frame}{Tables}
+\setbeamercovered{transparent}
+Simple tables can be created in beamer with the tabular environment.
+\begin{itemize}
+\pause \item Tables start with the command \textbackslash begin\{tabular\}~\{ccc\}.
+\pause \item \{ccc\}~tells us the number of columns as well as the alignment
+of each column. This table has three columns, each column is
+center aligned.
+\pause \item Columns can be aligned to the left \{l\}, center \{c\}, or right \{r\}.
+\pause \item Alignments can be mixed up. For example, \{lcrrr\}.
+\pause \item Tables are constructed in rows. A \& divides each cell and each
+row must end with \textbackslash \textbackslash.
+\pause \item \textbackslash end\{tabular\}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Table Example}
+\setbeamercovered{transparent}
+\begin{itemize}
+\pause \item[]\begin{block}{Example}
+\textbackslash begin\{tabular\}\{ccc\}\\
+cell 1 ~\&~ cell 2~ \&~ cell 3 ~\textbackslash \textbackslash~~\\
+cell 4 ~\&~ cell 5~ \&~ cell 6 ~\textbackslash \textbackslash~~\\
+\textbackslash end\{tabular\}
+\end{block}
+\vspace{0.2cm}
+\pause \item[]\begin{tabular}{ccc}
+cell 1 & cell 2 & cell 3 \\
+cell 4 & cell 5 & cell 6 \\
+\end{tabular}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{hline Example}
+\setbeamercovered{transparent}
+\begin{itemize}
+\item We can add \textbackslash hline between rows to divide rows more clearly:
+\pause \item[]\begin{block}{Example}
+\textbackslash begin\{tabular\}\{ccc\}\\
+~~ \textcolor{red}{\textbackslash hline}\\
+cell 1 ~\&~ cell 2~ \&~ cell 3 ~\textbackslash \textbackslash~~\\
+~~ \textcolor{red}{\textbackslash hline}\\
+cell 4 ~\&~ cell 5~ \&~ cell 6 ~\textbackslash \textbackslash~~\\
+~~ \textcolor{red}{\textbackslash hline}\\
+\textbackslash end\{tabular\}
+\end{block}
+\vspace{0.2cm}
+\pause \item[]\begin{tabular}{ccc}
+\hline
+cell 1 & cell 2 & cell 3 \\
+\hline
+cell 4 & cell 5 & cell 6 \\
+\hline
+\end{tabular}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pipe Example}
+\setbeamercovered{transparent}
+\begin{itemize}
+\item We can add a ``$|$'' between column indicators to divide columns more
+clearly:
+\pause \item[]\begin{block}{Example}
+\textbackslash begin\{tabular\}\{$|c|c|c|$\}\\
+cell 1 ~\&~ cell 2~ \&~ cell 3 ~\textbackslash \textbackslash~~\\
+cell 4 ~\&~ cell 5~ \&~ cell 6 ~\textbackslash \textbackslash~~\\
+\textbackslash end\{tabular\}
+\end{block}
+\vspace{0.2cm}
+\pause \item[]\begin{tabular}{|c|c|c|}
+cell 1 & cell 2 & cell 3 \\
+cell 4 & cell 5 & cell 6 \\
+\end{tabular}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Column Spacing}
+\setbeamercovered{transparent}
+\begin{itemize}
+\pause \item Column width can be modified by changing \textbackslash tabcolsep like this
+\pause\item[]\begin{columns}[c]
+\column{1.5in}
+\textbackslash begin\{tabular\}\{$|l|l|$\}\\
+~~\textbackslash hline \\
+~~a \& Row 1 \textbackslash\textbackslash ~~\textbackslash hline \\
+~~b \& Row 2 \textbackslash\textbackslash ~~\textbackslash hline \\
+~~c \& Row 3 \textbackslash\textbackslash ~~\textbackslash hline \\
+\textbackslash end\{tabular\}\\
+\vspace{0.3cm} \underline{Output :}\\
+\begin{tabular}{|l|l|}
+  \hline
+  a & Row 1 \\ \hline
+  b & Row 2 \\ \hline
+  c & Row 3 \\ \hline
+\end{tabular}
+\column{2in}
+\textbackslash setlength \{\textbackslash tabcolsep\}\{10pt\}\\
+%\textbackslash setlength\{\textbackslash extrarowheight\}\{1.5pt\}
+\textbackslash begin\{tabular\}\{$|l|l|$\}\\
+~~\textbackslash hline \\
+~~a \& Row 1 \textbackslash\textbackslash ~~\textbackslash hline \\
+~~b \& Row 2 \textbackslash\textbackslash ~~\textbackslash hline \\
+~~c \& Row 3 \textbackslash\textbackslash ~~\textbackslash hline \\
+\textbackslash end\{tabular\}\\
+\vspace{0.3cm} \underline{Output :}\\
+\setlength{\tabcolsep}{10pt}
+%\setlength{\extrarowheight}{1.5pt}
+\begin{tabular}{|l|l|}
+  \hline
+  a & Row 1 \\ \hline
+  b & Row 2 \\ \hline
+  c & Row 3 \\ \hline
+\end{tabular}
+\end{columns}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rotating a Table \ldots}
+\setbeamercovered{transparent}
+\begin{itemize}
+\pause \item \textbackslash usepackage ~\{rotating\}
+\pause \item[] \begin{block}{sidewaystable}
+\textbackslash begin~\{sidewaystable\}\\
+\textbackslash begin\{tabular\} \\
+\ldots \\
+\textbackslash end \{tabular\}\\
+\textbackslash end~\{sidewaystable\}
+\end{block}
+\pause \item[] \begin{block}{rotate}
+\textbackslash begin \{rotate\}~\{angle\}\\
+\textbackslash begin\{tabular\} \\
+\ldots \\
+\textbackslash end \{tabular\}\\
+\textbackslash end \{rotate\}
+\end{block}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rotation Continued \ldots}
+\setbeamercovered{transparent}
+\begin{itemize}
+\pause \item \textbackslash usepackage \{pdflscape\}
+\pause \item[] \begin{block}{pdflscape}
+\textbackslash begin \{landscape\}\\
+......\\
+\textbackslash end \{landscape\}
+\end{block}
+\pause \item This makes the page appear as “landscape”, while the rest will remain in “portrait” orientation.
+\end{itemize}
+\end{frame}
+\begin{frame}{Exporting a Table from OOo Spreadsheet}
+\setbeamercovered{transparent}
+\begin{itemize}
+\pause \item Visit the site \textcolor{red}{http://calc2latex.sourceforge.net/}
+\pause \item Download the package and follow the installation instructions
+\pause \item Make your desired Table in Calc
+\pause \item Select cells you want to convert into LaTeX format.
+\pause \item Goto Tools~\textgreater~Macros~\textgreater~Run Macro
+\pause \item Inside MyMacros library name select \framebox{calc2latex} and in macro name select \framebox{main} and click run
+\pause \item A settings tab will appear click convert you will get the \LaTeX code
+\end{itemize}
+\end{frame}
+
+%\begin{frame}{Long Table \ldots}
+%\setbeamercovered{transparent}
+%\begin{itemize}
+%\pause \item The longtable package is designed to make tables that span page breaks.
+%\end{itemize}
+%\end{frame}
+
+%\begin{frame}{Footnotes in Tables}
+%\setbeamercovered{transparent}
+%\begin{itemize}
+%\item content...
+%\end{itemize}
+%\end{frame}
+
+\end{document}
