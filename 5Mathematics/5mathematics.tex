@@ -1,0 +1,102 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usepackage{beamerthemesplit}
+\usepackage{color}
+\usepackage{textcomp}
+\title{Mathematics Mode in \LaTeX \\ $\lambda,\xi,\pi,\theta,
+ \mu,\Phi,\Omega,\Delta$}
+\author{SPACE}
+\date{\today}
+%\logo{\includegraphics[width=1cm]{space}}
+\begin{document}
+\maketitle
+\begin{frame}{Single Equations\ldots}
+\setbeamercovered{transparent}
+\begin{itemize}
+\pause \item Mathematical equations within a paragraph are entered between \$
+and \$:
+\pause \item $a^2$
+\pause \item[] \$~a~\^~2~\$
+\pause \item $a^2 + b^2 = c^2$
+\pause \item[] \$~a~\^~2+~b~\^~2~ \$
+\pause \item $E=mc^2$
+\pause \item[] \$E=mc~\^~2\$
+\pause \item $\frac{1}{k^2}$
+\pause \item[] \$\textbackslash frac\{1\}\{k~\^~2\}\$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Another method\ldots}
+\setbeamercovered{transparent}
+\textbackslash usetheme \{amsmath\}
+\begin{itemize}
+\pause\item[]\begin{block}{Eqn\ldots}
+\textbackslash begin~\{equation\}\\
+\ldots \ldots\\
+\textbackslash end~\{equation\}
+\begin{itemize}
+\pause \item You can avoid \$ symbols here
+\end{itemize}
+\end{block}
+\pause\item You can then \textbackslash label an equation number and refer to it
+somewhere else in the text by using the \textbackslash eqref command.
+\pause \item If you want to name the equation something specific, you \textbackslash tag it instead.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Complex Equations}
+\setbeamercovered{transparent}
+\begin{itemize}
+\pause \item[]\begin{flushleft}
+ \begin{equation*}
+ \lim_{n \to \infty}
+ \sum_{k=1}^n \frac{1}{k^2}
+ = \frac{\pi^2}{6}
+\end{equation*}
+\end{flushleft}
+\pause \item[] \begin{flushleft}
+ \textbackslash begin\{equation\}\\
+\textbackslash lim\_\{n \textbackslash to \textbackslash infty\}\\
+\textbackslash sum\_\{k=1\}\^~n \textbackslash frac\{1\}{k\^~2}\\
+ = \textbackslash frac\{\textbackslash pi\^~2\}\{6\}\\
+\textbackslash end\{equation\}
+\end{flushleft}
+\pause \item[]
+\pause \item $d_{e_{e_p}}$ ~$\rightarrow$~~ \$d\_\{e\_\{e\_p\}\}\$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Greek Letters \ldots}
+\setbeamercovered{transparent}
+\begin{itemize}
+\pause \item \textbackslash lambda $\rightarrow$ $\lambda $ \\
+\pause \item \textbackslash xi $\rightarrow$ $\xi$ \\
+\pause \item \textbackslash pi $\rightarrow$ $\pi$ \\
+\pause \item \textbackslash theta $\rightarrow$ $\theta$ \\
+\pause \item \textbackslash mu $\rightarrow$ $\mu$ \\
+\pause \item \textbackslash phi $\rightarrow$ $\phi$ \\
+\pause \item \textbackslash Omega $\rightarrow$ $\Omega$ \\
+\pause \item \textbackslash omega $\rightarrow$ $\omega$ \\
+\pause \item \textbackslash Delta $\rightarrow$ $\Delta$ \\
+\pause \item \textbackslash delta $\rightarrow$ $\delta$ \\
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Vectors,Square root}
+\setbeamercovered{transparent}
+\begin{block}{Vectors}
+\begin{itemize}
+\pause \item \textbackslash vec~\{a\} $\rightarrow$~$\vec{a}$
+\pause \item \textbackslash vec~\{AB\} $\rightarrow$~$\vec{AB}$
+\pause \item \textbackslash overrightarrow~\{AB\} $\rightarrow$~ $\overrightarrow{AB}$ \\
+\pause \item \textbackslash overrightarrow~\{AB\} $\rightarrow$~ $\overleftarrow{AB}$
+\end{itemize}
+\end{block}
+\begin{block}{Square Root}
+\begin{itemize}
+\pause \item \textbackslash sqrt\{\textbackslash frac\{x\^~2\}\{k+1\}\} $\rightarrow$ $\sqrt{\frac{x^2}{k+1}}$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}
