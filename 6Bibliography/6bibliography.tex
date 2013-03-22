@@ -1,0 +1,65 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usepackage{beamerthemesplit}
+\usepackage{color}
+\usepackage{textcomp}
+\title{Bibliography in \LaTeX}
+\author{SPACE}
+\date{\today}
+%\logo{\includegraphics[width=1cm]{space}}
+\begin{document}
+\maketitle
+\begin{frame}{Bibliography \ldots}
+\begin{itemize}
+\pause \item[] There are two ways of producing a bibliography.
+\pause \item You can either produce a bibliography by manually listing the entries of the bibliography (Hardway).
+\pause \item Or by producing it automatically using the BibTeX program of LaTeX.
+\end{itemize}
+\end{frame}
+\begin{frame}{Manually}
+\begin{itemize}
+\pause \item[] \begin{block}{Manual Entry \ldots}
+\textbackslash begin~\{thebibliography\}~\{widest entry\}\\
+~~~\textbackslash bibitem~[label1]\{cite\_key1\} bibliographic information\\
+~~~\textbackslash bibitem~[label2]\{cite\_key2\} bibliographic information \\
+~~~~\ldots\\
+\textbackslash end~\{thebibliography\}
+\end{block}
+\pause\item This environment adds Bibliography into table of contents and sets up the style of the bibliography pages.
+\pause\item \emph{label} is an optional argument.
+\pause\item \emph{cite\_key} is a mandatory argument.
+\pause\item  \emph{cite\_key} is a reference keyword that does not appear in the bibliography but it is used to as a quick name to cite a reference.
+\end{itemize}
+\end{frame}
+\begin{frame}{Manually \ldots}
+\begin{itemize}
+\pause \item[] \begin{block}{Citation \ldots}
+\begin{itemize}
+\pause \item The citation in the text itself is made with the command \ cite\{cite\_key\}
+\pause \item Where cite\_key is the reference keyword that appears in the \textbackslash bibitem command. 
+\end{itemize}
+\end{block}
+\vspace{1.5cm}
+\pause \item[] \large \textbf{Try It !!!}
+\end{itemize}
+\end{frame}
+\begin{frame}{The BibTeX Method \ldots}
+\begin{itemize}
+\pause \item We need a BibTeX or bib file \vspace{0.5cm}
+\pause \item \textbf{How to generate a bib file ???}
+\begin{itemize}
+\pause \item Write Manually \ldots
+\pause \item Generate a bib file using Firefox addon \textcolor{red}{Zotero}
+\end{itemize}
+\pause \item Generate a bib file using zotero the easy way \ldots
+\pause \item Export the saved items in BibTex format
+\end{itemize}
+\end{frame}
+\begin{frame}{Commands \ldots}
+\begin{itemize}
+\pause \item \textbackslash bibliographystyle\{style\} (plain)\\
+\pause \item \textbackslash bibliography\{file\} (generated bib files name)
+\pause \item Hotkey for BibTeX compilation F11
+\end{itemize}
+\end{frame}
+\end{document}
