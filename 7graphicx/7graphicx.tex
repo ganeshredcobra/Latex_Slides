@@ -1,0 +1,106 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usepackage{beamerthemesplit}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\title{Graphics \\ Using \LaTeX}
+\author{SPACE}
+\date{\today}
+%\logo{\includegraphics[width=1cm]{space}}
+\begin{document}
+\maketitle
+\begin{frame}{Graphics }
+\begin{center}
+\pause \includegraphics[totalheight=1in]{graph}
+\hspace{0.5cm} \pause \includegraphics[totalheight=1in,origin=c,angle=45]{graph}
+\hspace{0.5cm} \pause \includegraphics[totalheight=1in,origin=c,angle=-90]{graph}
+\hspace{0.5cm} \pause \includegraphics[totalheight=1in,origin=c,angle=-180]{graph}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Inserting a Figure}
+\setbeamercovered{transparent}
+\begin{block}{Example}
+\textbackslash begin \{figure\}\\
+\hspace{0.5cm}\textbackslash centering\\
+\hspace{0.5cm}\textbackslash includegraphics[width=3.0in]\{imagefile1\}\\
+\hspace{0.5cm}\textbackslash caption\{Caption for figure\}\\
+\hspace{0.5cm}\textbackslash label\{fig:samplefigure\}\\
+\textbackslash end\{figure\}
+\end{block}
+\begin{itemize}
+\pause \item The whole block is enclosed between \textbackslash begin\{figure\} and \textbackslash end\{figure\}. The command \textbackslash includegraphics does the actual insertion of the image. Here the file name of the inserted image is imagefile1. If you are using LaTeX to process your document, .eps extension is appended automatically to the file name. If you are using pdfLaTeX, it appends .pdf, .png, or .jpg when searching for the image file.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\pause \item By default, figures are looked for in the current directory.
+\pause \item If your figures are in a sub-directory named "figures" inside the current directory, you write something like this:   \textbackslash includegraphics[width=3.0in]\{figures/imagefile1\}.
+\pause \item You can also specify the width of the image.
+\pause \item keep the \textbackslash label and \textbackslash caption commands always inside the \textbackslash begin\{figure\}...\textbackslash end\{figure\} structure
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Subfigures}
+\begin{figure}
+    \centering
+    \subfigure[First caption]
+    {
+        \includegraphics[width=1.0in]{graph1}
+        \label{fig:first_sub}
+    }
+    \\
+    \subfigure[Second caption]
+    {
+        \includegraphics[width=1.0in]{graph2}
+        \label{fig:second_sub}
+    }
+    \subfigure[Third caption]
+    {
+        \includegraphics[width=1.0in]{graph3}
+        \label{fig:third_sub}
+    }
+    \caption{Common figure caption.}
+    \label{fig:sample_subfigures}
+\end{figure}
+\end{frame}
+
+\begin{frame}{subfigures}
+\textbackslash begin\{figure\}\\
+\hspace{0.5cm}\textbackslash centering\\
+\hspace{0.5cm}\textbackslash subfigure[First caption]\\
+\hspace{0.5cm}\{\\
+\hspace{1cm}\textbackslash includegraphics[width=1.0in]\{imagefile2\}\\
+\hspace{1cm}\textbackslash label\{fig:first\_sub\}\\
+\hspace{0.5cm}\}\\
+\hspace{0.5cm}\textbackslash subfigure[Second caption]\\
+\hspace{0.5cm}\{\\
+\hspace{1cm}\textbackslash includegraphics[width=1.0in]\{imagefile2\}\\
+\hspace{1cm}\textbackslash label\{fig:second\_sub\}\\
+\hspace{0.5cm}\}\\
+\hspace{0.5cm}\textbackslash subfigure[Third caption]\\
+\hspace{0.5cm}\{\\
+\hspace{1cm}\textbackslash includegraphics[width=1.0in]\{imagefile2\}\\
+\hspace{1cm}\textbackslash label\{fig:third\_sub\}\\
+\hspace{0.5cm}\}\\
+
+\end{frame}
+
+\begin{frame}{subfigure}
+\begin{block}{packages}
+\begin{itemize}
+\pause \item \textbackslash usepackage \{graphicx\}
+\pause \item \textbackslash usepackage \{subfigure\}
+\end{itemize}
+\end{block}
+\begin{itemize}
+\pause \item \textbackslash caption\{Common figure caption.\}
+\pause \item \textbackslash label\{fig:sample\_subfigures\}
+\end{itemize}
+\end{frame}
+
+\end{document}
