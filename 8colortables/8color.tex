@@ -1,0 +1,91 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usepackage{beamerthemesplit}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\title{Color Table's \\ Using \LaTeX}
+\author{SPACE}
+\date{\today}
+%\logo{\includegraphics[width=1cm]{space}}
+\begin{document}
+\maketitle
+
+\begin{frame}{Color Tables }
+\begin{block}{package}
+\begin{itemize}
+\item \textbackslash usepackage\{colortbl\}
+\item The colortbl package provides a number of commands using which one can obtain really
+colorful tables.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{color table's}
+\setbeamercovered{transparent}
+\begin{itemize}
+\pause\item[]\begin{columns}[c]
+\column{1.5in}
+\textbackslash begin\{tabular\}\{$|l|r|$\}\\
+~~\textbackslash hline \\
+~~one \& two  \textbackslash\textbackslash ~~\textbackslash hline \\
+~~three \& four\textbackslash\textbackslash ~~\textbackslash hline \\
+\textbackslash end\{tabular\}\\
+\vspace{0.3cm} \underline{Output :}\\
+\begin{tabular}{|l|l|}
+  \hline
+  one & two \\ \hline
+  three & four \\ \hline
+\end{tabular}
+\column{1.5in}
+%\textbackslash setlength\{\textbackslash extrarowheight\}\{1.5pt\}
+\textbackslash begin\{tabular\}\{$|l|r|$\}\\
+~~\textbackslash hline \\
+~~\textbackslash rowcolor\{blue\} one \& two  \textbackslash\textbackslash ~~\textbackslash hline \\
+~~three \& four\textbackslash\textbackslash ~~\textbackslash hline \\
+\textbackslash end\{tabular\}\\
+\vspace{0.3cm} \underline{Output :}\\
+%\setlength{\tabcolsep}{10pt}
+%\setlength{\extrarowheight}{1.5pt}
+\begin{tabular}{|l|l|}
+  \hline
+\rowcolor{blue} one & two \\ \hline
+\rowcolor{green} three & four \\ \hline
+\end{tabular}
+\end{columns}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{color table's}
+\setbeamercovered{transparent}
+\begin{itemize}
+\item \textbackslash rowcolor\{color\}
+\item \textbackslash cellcolor\{color\}
+\item[] Examples :
+\item[] \begin{tabular}{|l|l|}
+  \hline
+\rowcolor{yellow} one & two \\ \hline
+\rowcolor{red} three & four \\ \hline
+\end{tabular} $\rightarrow$ Rowcolor
+\item[] \begin{tabular}{|l|l|}
+  \hline
+\cellcolor{green} {one} & two \\ \hline
+ three & \cellcolor{blue} \color{yellow} {four} \\ \hline
+\end{tabular} $\rightarrow$ Cell color *Text color
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Try this....}
+\begin{tabular}{|l|r|r|r|r|}
+\hline
+\rowcolor{green} Name & Class & Mark1 & Mark2 & Mark3\\\hline
+Albert & 8 & 40 & 35 & 30 \\\hline
+Edwin & 8 & \cellcolor{yellow} 27 & 42 & 39 \\\hline
+Peter & 8 & 41 & 39 & 40 \\\hline
+Harry & 8 & 31 & 37 & \cellcolor{red}15 \\\hline
+\end{tabular}
+\end{frame}
+
+\end{document}
